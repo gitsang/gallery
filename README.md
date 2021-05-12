@@ -25,8 +25,8 @@ git push origin master
 #.bash_aliases
 GALLERY_PATH=/root/project/gallery
 upimg() {
-    IMG=$1
-    cp ${IMG} ${GALLERY_PATH}/$(date +%Y%m%d-%H%M%S).png
+    IMG_FILE=$1
+    cp ${IMG_FILE} ${GALLERY_PATH}/$(date +%Y%m%d-%H%M%S).${IMG_FILE#*.}
     cd ${GALLERY_PATH}
     # git pull
     git add all .
